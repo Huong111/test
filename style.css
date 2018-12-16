@@ -1,0 +1,156 @@
+body{
+	background-color: #c8d6e5;
+	padding: 0;
+	margin: 0;
+}
+
+.container{/* tạo 1 khối lớn*/
+	height: 500px;
+	width: 200px;
+	
+	top: -10px;
+	left: 50%;
+	transform: translate(-50%, 0%) rotate(45deg);
+	/*cái này là để canh chỉnh.. 
+	translate là để di chuyển.. 
+	X là theo trục ngang 
+	Y là theo trục dọc.. 
+	rotate là để chỉnh độ nghiêng theo độ deg*/
+	position: absolute;
+	transform-origin: top center;/*cái này để cố định góc*/
+	animation: nghien 3s infinite;
+}
+
+@keyframes nghien{
+	0%{
+		
+		transform: translate(-50%, 0%) rotate(45deg);
+	}
+	50%{
+		
+		transform: translate(-50%, 0%) rotate(-45deg);
+	}
+	100%{
+		
+		transform: translate(-50%, 0%) rotate(45deg);
+	}
+}
+
+
+.cong{
+	height: 250px;
+	width: 5px;
+	background-color: black;
+	top :0%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,0%);
+}
+#duoi{
+	height: 70px;
+	width: 70px;
+	background-color: #30336b;
+	top: 240px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0%);
+	border-top-left-radius: 40%;
+	border-top-right-radius: 40%;
+	z-index: 2;
+}
+#bong{
+	height: 150px;
+	width: 150px;
+	background-color: #fff;
+	top: 300px;
+	position: absolute;
+	left: 50%;
+	border-radius: 50%;
+	transform: translateX(-50%);
+	z-index: 1;/*ưu iên nằm lớp trên*/
+
+}
+#toc{
+	height: 50px;
+	width: 10px;
+	background-color: #686de0;
+	top: 0px;
+	left: 50%;
+	position: absolute;
+	z-index: 3;
+	transform: translate(-50%,0%) rotate(30deg);
+	transform-origin: top center;
+
+}
+#tooc{
+	height: 50px;
+	width: 10px;
+	background-color: #686de0;
+	top: 0px;
+	left: 50%;
+	position: absolute;
+	z-index: 3;
+	transform: translate(-50%,0%) rotate(-30deg);
+	transform-origin: top center;
+
+}
+#day{
+	height: 90px;
+	width: 90px;
+	background-color: #dcdde1;
+	top: 40px;
+	left: 20%;
+	position: absolute;
+	border-radius: 50%;
+	transform: translate(0%,-10%);
+	z-index: 3;
+	animation: sang 3s infinite;
+}
+@keyframes sang {
+	0%{
+		background-color: #fbc531;
+	}
+	25%{
+		background-color: #f5f6fa;
+	}
+	50%{
+		background-color: #fbc531;
+	}
+	75%{
+		background-color: #f5f6fa;
+	}
+	100%{
+		background-color: #fbc531;
+	}
+}
+#shadow{
+	height: 70px;
+	width: 150px;
+	background-color: rgba(255, 165, 2,.9);
+	top: 80%;
+	left: 0%;
+	position: absolute;
+	animation: chuyen 3s infinite;
+	border-radius: 50%;
+}
+@keyframes chuyen {
+	0%{
+		left: 10%;
+		background-color: rgba(255, 165, 2,.9);
+	}
+	25%{
+		background-color: rgba(255, 165, 2,.3);
+	}
+	50%{
+		left: 80%;
+		background-color: rgba(255, 165, 2,.9);
+	}
+	75%{
+		background-color: rgba(255, 165, 2,.3);
+	}
+	100%{
+		left: 10%;
+		background-color: rgba(255, 165, 2,.9);
+	}
+
+}
